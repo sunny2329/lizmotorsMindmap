@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+.elements {
+    background-color: coral;
+    padding: 5px;
+    border-radius: 6px;
+    min-width: 120px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Inter Tight";
+    letter-spacing: 2px;
+    border: 2px solid black;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.cols {
+    height: 96vh;
+    width: 18%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.colss {
+    height: 96vh;
+    width: 30%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.root {
+    height: 96vh;
+    width: 0.5%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mob {
+    min-height: 96vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.secondlevel,
+.thirdlevel,
+.fourthlevel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 60px;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      visibility: hidden;
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+
+.float{
+    position: absolute; 
+    right: 70px;
+    top: 50px;
+    z-index: 2;
+}
+
+.float1{
+    position: absolute; 
+    right: 70px;
+    top: 100px;
+    z-index: 2;
+}
+
+.float2{
+    position: absolute; 
+    right: 70px;
+    top: 130px;
+    z-index: 2;
+}
+
+.float3{
+    position: absolute; 
+    right: 70px;
+    top: 170px;
+    z-index: 2;
+}
+
+.card{
+    background-color: white;
+    padding: 10px;
+    min-height: 40vh;
+    min-width: 250px;
+    border-radius: 10px;
+    opacity: 0.9;
+    border: 2px solid yellowgreen;
+}
+
+.lists{
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.center{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
