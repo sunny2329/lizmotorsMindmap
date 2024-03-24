@@ -134,7 +134,7 @@ function DesktopComponent() {
 
                             <button class="pushable" onClick={clicked}>
                                 <span class="front">
-                                    {button ? 'Open All' : "Close All"}
+                                    {button ? 'Close All' : "Open All"}
                                 </span>
                             </button>
 
