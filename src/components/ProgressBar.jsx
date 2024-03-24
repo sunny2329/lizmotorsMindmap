@@ -32,16 +32,16 @@ const ProgressBar = ({ bgcolor, progress, height, name, number }) => {
 
     return (
         <div>
-            //Assign a name of the progress bar
+            {/* Assign a name of the progress bar  */}
             <div style={{ display: 'inline-block', marginRight: '10px', fontSize: '0.6rem' }}>{name}</div>
-            //The actual progress bar
+            {/* The actual progress bar  */}
             <div style={Parentdiv}>
                 <div style={Childdiv}>
                     <span style={progresstext}></span>
 
                 </div>
             </div>
-            //Assign a number to the progress bar
+            {/* Assign a number to the progress bar  */}
             <div style={{ display: 'inline-block', marginLeft: '5px', fontSize: '0.6rem' }}>{number}</div>
         </div>
 

@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-    //conditional Rendering
+    {/* Conditional Rendering  */}
       {
         isMobile ? (
           <MobileComponent />

@@ -63,7 +63,7 @@ function MobileComponent() {
 
     return (
         <>
-            //All the cards that need to shown when a segment is hovered
+            {/* All the cards that need to shown when a segment is hovered  */}
             <div className={`${style.float}`}>
                 {isHovered && <Card title={'Online'} />}
             </div>
