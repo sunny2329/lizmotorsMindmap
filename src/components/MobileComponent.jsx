@@ -8,16 +8,23 @@ import Card from './Card'
 import style from './../Mobile.module.css'
 
 function MobileComponent() {
+    //All the head components of the tree 
     const [research, setResearch] = useState(false);
     const [planning, setPlanning] = useState(false);
     const [desiging, setDesiging] = useState(false);
     const [manufacturing, setManufacturing] = useState(false);
     const [sales, setSales] = useState(false);
+
+    //Button state 
     const [button, setButton] = useState(false);
+
+    //Hovering status using state of each segment
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false);
+
+    //All the handle functions when the head element is clicked
     const handleR = () => {
         setResearch(!research);
     }
@@ -34,6 +41,8 @@ function MobileComponent() {
         setSales(!sales);
     }
 
+
+    //Handle function for Open ALl/Close All button
     const clicked = () => {
         if (button) {
             setResearch(false);
@@ -54,6 +63,7 @@ function MobileComponent() {
 
     return (
         <>
+            //All the cards that need to shown when a segment is hovered
             <div className={`${style.float}`}>
                 {isHovered && <Card title={'Online'} />}
             </div>
@@ -66,16 +76,25 @@ function MobileComponent() {
             <div className={`${style.float3}`}>
                 {isHovered3 && <Card title={'Health'} />}
             </div>
+
+
             <div>
                 <ArcherContainer strokeColor='yellow' lineStyle='angle' endMarker={true}
                     strokeWidth={0.5}>
+                    {/******************* Main Container Starts Here ******************************** */}
                     <div className={`mcontainer ${styles.mob}`}>
+
+                        {/********************* Button Starts Here  *************************/}
                         <button class="pushable" >
                             <span class="front" onClick={clicked}>
                                 {button ? 'Close All' : "Open All"}
                             </span>
                         </button>
+                        {/***************** Button Ends Here  ********************************/}
+
+                        {/************* First Element Starts Here **************************** */}
                         <div className="firstel">
+                            {/****************** First Level Starts Here ****************************** */}
                             <div className="firstlevel">
                                 <ArcherElement
                                     id='research'
@@ -105,7 +124,9 @@ function MobileComponent() {
                                     </div>
                                 </ArcherElement>
                             </div>
+                            {/*************** First Level Ends Here  *******************************************/}
 
+                            {/*****************Second Level Starts Here ******************************* */}
                             <div className={`secondlevel ${styles.secondlevel}`}>
 
                                 <div className={research ? 'hi' : `${styles.hide}`}>
@@ -152,8 +173,9 @@ function MobileComponent() {
                                 </div>
 
                             </div>
+                            {/*********** Second Level Ends Here ************************************* */}
 
-
+                            {/*********************** Third Level Starts Here ************************** */}
                             <div className={`thirdlevel ${styles.thirdlevel}`}>
                                 <div className={research ? 'hi' : `${styles.hide}`}>
                                     <ArcherElement
@@ -215,8 +237,9 @@ function MobileComponent() {
                                 </div>
 
                             </div>
+                            {/************** Third Level Ends Here ************************************* */}
 
-
+                            {/************ Fourth Level Starts Here ********************************* */}
                             <div className={`fourthlevel ${styles.fourthlevel}`}>
 
                                 <div className={research ? 'hi' : `${styles.hide}`} onMouseEnter={() => setIsHovered(true)}
@@ -257,10 +280,13 @@ function MobileComponent() {
 
 
                             </div>
+                            {/* ******************* Fourth Level Ends Here  **************************** */}
 
                         </div>
 
+                        {/* ***************** Second Element Starts Here  *************************** */}
                         <div className="secondel">
+                            {/* First Level Starts Here */}
                             <div className="firstlevel">
                                 <ArcherElement
                                     id='planning'
@@ -290,7 +316,9 @@ function MobileComponent() {
                                     </div>
                                 </ArcherElement>
                             </div>
+                            {/* First Level Ends Here  */}
 
+                            {/* Second Level Starts Here  */}
                             <div className={`secondlevel ${styles.secondlevel}`}>
                                 <div className={planning ? 'hi' : `${styles.hide}`}>
                                     <ArcherElement
@@ -312,10 +340,13 @@ function MobileComponent() {
                                     </ArcherElement>
                                 </div>
                             </div>
+                            {/* Second Level Ends Here  */}
                         </div>
+                        {/************************** Second Element Ends Here *********************** */}
 
-
+                        {/************************** Third Element Starts Here ********************** */}
                         <div className="thirdel">
+                            {/* First Level Starts Here  */}
                             <div className="firstlevel">
                                 <ArcherElement
                                     id='desiging'
@@ -345,8 +376,9 @@ function MobileComponent() {
                                     </div>
                                 </ArcherElement>
                             </div>
+                            {/* First Level Ends Here  */}
 
-
+                            {/* Second Level Starts Here  */}
                             <div className={`secondlevel ${styles.secondlevel}`}>
                                 <div className={desiging ? 'hi' : `${styles.hide}`}>
                                     <ArcherElement id="hardware">
@@ -364,10 +396,13 @@ function MobileComponent() {
                                     </ArcherElement>
                                 </div>
                             </div>
+                            {/* Second Level Ends Here  */}
                         </div>
+                        {/* ******************* Third Element Ends Here ****************************** */}
 
-
+                        {/* ******************** Fourth Element Starts Here ************************** */}
                         <div className="fourthel">
+                            {/* First Level Starts Here  */}
                             <div className="firstlevel">
                                 <ArcherElement
                                     id='manufacturing'
@@ -397,7 +432,9 @@ function MobileComponent() {
                                     </div>
                                 </ArcherElement>
                             </div>
+                            {/* First Level Ends Here  */}
 
+                            {/* Second Level Starts Here  */}
                             <div className={`secondlevel ${styles.secondlevel}`}>
                                 <div className={manufacturing ? 'hi' : `${styles.hide}`}>
                                     <ArcherElement id="material">
@@ -415,10 +452,13 @@ function MobileComponent() {
                                     </ArcherElement>
                                 </div>
                             </div>
+                            {/* Second Level Ends Here  */}
                         </div>
+                        {/* ************************ Fourth Element Ends Here ************************* */}
 
-
+                        {/************************* Fifth Element Starts Here  ***************************/}
                         <div className="fifthel">
+                            {/* First Element Starts Here  */}
                             <div className="firstlevel">
                                 <ArcherElement
                                     id='sales'
@@ -448,7 +488,9 @@ function MobileComponent() {
                                     </div>
                                 </ArcherElement>
                             </div>
+                            {/* First Element Ends Here  */}
 
+                            {/* Second Element Starts Here  */}
                             <div className={`secondlevel ${styles.secondlevel}`}>
                                 <div className={sales ? 'hi' : `${styles.hide}`}>
                                     <ArcherElement id="online">
@@ -466,8 +508,11 @@ function MobileComponent() {
                                     </ArcherElement>
                                 </div>
                             </div>
+                            {/* Second Element Ends Here  */}
                         </div>
+                        {/* *********************** Fifth Elemtn Ends Here  *******************************/}
                     </div>
+                    {/****************** Main Container Ends Here *********************************** */}
                 </ArcherContainer>
             </div>
         </>

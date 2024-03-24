@@ -2,11 +2,13 @@ import { useState } from 'react'
 import DesktopComponent from './components/DesktopComponent'
 import MobileComponent from './components/MobileComponent';
 import { useEffect } from 'react';
-import Card from './components/Card';
+
 
 function App() {
+  // Using state for conditional rendering as per screen size 
   const [isMobile,setIsMobile] = useState(window.innerWidth <=868);
 
+  // Dynamic change of rendering as the screen size changes 
   useEffect(()=>{
     const handleResize = () => {
       setIsMobile(window.innerWidth<=868);
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <>
+    //conditional Rendering
       {
         isMobile ? (
           <MobileComponent />

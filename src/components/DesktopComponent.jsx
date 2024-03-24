@@ -17,7 +17,6 @@ function DesktopComponent() {
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false);
-    const [showAll, setShowAll] = useState(false);
     const handleR = () => {
         setResearch(!research);
     }
